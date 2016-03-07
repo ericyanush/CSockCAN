@@ -25,3 +25,11 @@
  @return The interface index of the interface if found, -1 otherwise (same as ioctl)
  */
 int32_t getIfIndexForIfName(const char* name, int32_t socketHandle);
+
+/**
+ @brief Retrieve the Timestamp of the message last read from the socket
+
+ @param socketHandle: The socketHandle to retrieve the timestamp for
+ @param tv: A pointer to the timeval struct to store the result in
+ */
+void getTimestampForSocketRead(int32_t socketHandle, struct timeval* tv);

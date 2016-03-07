@@ -11,3 +11,8 @@ int32_t getIfIndexForIfName(const char* name, int32_t socketHandle)
     ioctl(socketHandle, SIOCGIFINDEX, &ifr);
     return ifr.ifr_ifindex;
 }
+
+void getTimestampForSocketRead(int32_t socketHandle, struct timeval* tv)
+{
+    ioctl(socketHandle, SIOCGSTAMP, tv);
+}
