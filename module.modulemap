@@ -1,0 +1,5 @@
+module CSockCAN [system] {
+    header "/usr/local/include/csockcan.h"
+    link "csockcan"
+    export *
+}
