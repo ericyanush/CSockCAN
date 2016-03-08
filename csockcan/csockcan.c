@@ -22,7 +22,8 @@ void getTimestampForSocketRead(int32_t socketHandle, struct timeval* tv)
 void zero_fd(int32_t fd, fd_set* set)
 {
     //__fds_bits is defined as an array of size __FD_SETSIZE / NFDBITS
-    for (uint32_t i = 0; i < __FD_SETSIZE / NFDBITS; i++)
+    uint32_t i;
+    for (i = 0; i < __FD_SETSIZE / NFDBITS; i++)
     {
         set->__fds_bits[i] = 0;
     }
