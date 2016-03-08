@@ -16,7 +16,6 @@ int32_t getIfIndexForIfName(const char* name, int32_t socketHandle)
 void getTimestampForSocketRead(int32_t socketHandle, struct timeval* tv)
 {
     ioctl(socketHandle, SIOCGSTAMP, tv);
-    select(0, NULL, NULL, NULL, NULL);
 }
 
 void zero_fd(fd_set* set)
