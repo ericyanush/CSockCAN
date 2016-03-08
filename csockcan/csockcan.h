@@ -38,7 +38,7 @@ void getTimestampForSocketRead(int32_t socketHandle, struct timeval* tv);
 /**
  Methods for working with fd_sets
  */
-void zero_fd(int32_t fd, fd_set* set);
+void zero_fd(fd_set* set);
 void set_fd(int32_t fd, fd_set* set);
 void clear_fd(int32_t fd, fd_set* set);
 bool isSet_fd(int32_t fd, fd_set* set);
